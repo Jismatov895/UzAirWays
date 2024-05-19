@@ -15,6 +15,6 @@ public class Flight : Auditable
     public DateTime EndDate { get; set; }
     public decimal EconomPrice { get; set; }
     public decimal BusinessPrice { get; set; }
-    public ICollection<Ticket> Tickets { get; set; }
+    public IEnumerable<Ticket> Tickets { get; set; }
 }
 
