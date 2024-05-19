@@ -1,7 +1,6 @@
 ﻿using UzAirWays.Domain.Commons;
 
 namespace UzAirWays.Domain.Entities;
-
 public class Plane : Auditable
 {
     public string Number { get; set; }

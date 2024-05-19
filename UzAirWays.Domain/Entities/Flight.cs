@@ -3,7 +3,6 @@ using System.Numerics;
 using UzAirWays.Domain.Commons;
 
 namespace UzAirWays.Domain.Entities;
-
 public class Flight : Auditable
 {
     public long PlaneId { get; set; }
