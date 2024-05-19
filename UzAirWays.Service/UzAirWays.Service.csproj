@@ -1,16 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="DTOs\" />
+    <Folder Include="Mappers\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Exeptions\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\UzAirWays.DataAccess\UzAirWays.DataAccess.csproj" />
     <ProjectReference Include="..\UzAirWays.Domain\UzAirWays.Domain.csproj" />
-    <ProjectReference Include="..\UzAirWays.Service\UzAirWays.Service.csproj" />
   </ItemGroup>
 
 </Project>
