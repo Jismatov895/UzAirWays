@@ -6,6 +6,7 @@ namespace UzAirWays.Service.DTOs.Tickets;
 
 public class TicketViewModel
 {
+    public long Id { get; set; }
     public FlightViewModel Flight { get; set; }
     public UserViewModel User { get; set; }
     public SeedStatus SeedStatus { get; set; }
