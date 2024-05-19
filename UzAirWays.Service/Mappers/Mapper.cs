@@ -1,4 +1,5 @@
-﻿using ToshiChilonzor.Domain.Entities;
+﻿using System.Net.Sockets;
+using ToshiChilonzor.Domain.Entities;
 using UzAirWays.Domain.Entities;
 using UzAirWays.Service.DTOs.Airports;
 using UzAirWays.Service.DTOs.Planes;
@@ -105,10 +106,9 @@ public static class Mapper
         };
     }
 
-    public static IEnumerable<AirportViewModel> Map(List<Airport> airport)
+    public static IEnumerable<AirportViewModel> Map(IEnumerable<Airport> airports)
     {
-        var result = new List<AirportViewModel>();
-        airport.ForEach(airport => result.Add(new AirportViewModel
+        return airports.Select(airport => new AirportViewModel
         {
             Id = airport.Id,
             Name = airport.Name,
@@ -116,9 +116,7 @@ public static class Mapper
             City = airport.City,
             Address = airport.Address,
 
-        }));
-
-        return result;
+        });
     }
     public static Flight Map(FlightCreateModel createModel)
     {
