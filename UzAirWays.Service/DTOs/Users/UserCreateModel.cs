@@ -1,7 +1,6 @@
-﻿using UzAirWays.Domain.Commons;
+﻿namespace UzAirWays.Service.DTOs.Users;
 
-namespace UzAirWays.Domain.Entities;
-public class User : Auditable
+public class UserCreateModel
 {
     public string FirstName { get; set; }
     public string LastName { get; set; }
