@@ -110,7 +110,7 @@ public static class Mapper
             Name = airport.Name,
             Country = airport.Country,
             City = airport.City,
-            Address = airport.Address,
+            Address = airport.Address
         });
     }
     public static Flight Map(FlightCreateModel createModel)
