@@ -32,19 +32,15 @@ public static class Mapper
         };
     }
 
-    public static IEnumerable<UserViewModel> Map(List<User> user)
+    public static IEnumerable<UserViewModel> Map(IEnumerable<User> users)
     {
-        var result = new List<UserViewModel>();
-        user.ForEach(user => result.Add(new UserViewModel
+        return users.Select(user => new UserViewModel
         {
             Id = user.Id,
             FirstName = user.FirstName,
             LastName = user.LastName,
             Email = user.Email,
-
-        }));
-
-        return result;
+        });
     }
 
 
@@ -108,14 +104,13 @@ public static class Mapper
 
     public static IEnumerable<AirportViewModel> Map(IEnumerable<Airport> airports)
     {
-        return airports.Select(airport => new AirportViewModel
+        return airports.Select( airport => new AirportViewModel
         {
             Id = airport.Id,
             Name = airport.Name,
             Country = airport.Country,
             City = airport.City,
-            Address = airport.Address,
-
+            Address = airport.Address
         });
     }
     public static Flight Map(FlightCreateModel createModel)
